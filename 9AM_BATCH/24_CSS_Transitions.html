@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS 3 Transitions</title>
+    <style>
+        body{
+            font-family: "Comic Sans MS", sans-serif;
+        }
+        div{
+            height: 100px;
+            width: 100px;
+            background-color: black;
+            border-radius: 10px;
+            box-shadow: 0 0 15px black;
+        }
+        #t_width{
+            transition: all 1s;
+        }
+        #t_width:hover{
+            width: 300px;
+            background-color: orangered;
+        }
+
+        #t_height{
+            transition: all 1s;
+        }
+        #t_height:hover{
+            height: 200px;
+            background-color: blueviolet;
+        }
+
+        #t_both{
+            transition: all 1s;
+        }
+        #t_both:hover{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+           background-color: limegreen;
+        }
+        #t_timing{
+            transition: all 4s ease-in-out 1s;
+        }
+        #t_timing:hover{
+            width: 100%;
+        }
+
+        /* -------- Zoom Image --------------- */
+        .zoom{
+            width: 600px;
+            height: 350px;
+            margin: auto;
+            box-shadow: 0 0 10px black;
+            overflow: hidden;
+        }
+        .zoom img{
+            width: inherit;
+            height: inherit;
+            transition: all 0.5s;
+        }
+        .zoom:hover img{
+            transform: scale(1.2,1.2);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Transition Width -->
+    <h2>Transition Width</h2>
+    <div id="t_width"></div>
+
+    <!-- Transition Height -->
+    <h2>Transition Height</h2>
+    <div id="t_height"></div>
+
+    <!-- Transition Both -->
+    <h2>Transition Both</h2>
+    <div id="t_both"></div>
+
+
+    <!-- Transition Timing Function -->
+    <h2>Transition Timing Function</h2>
+    <div id="t_timing"></div>
+    
+    <!-- Image Zoom -->
+    <h2>Image Zoom</h2>
+    <figure class="zoom">
+        <img src="img/image4.jpeg">
+    </figure>
+
+<br><br><br>
+</body>
+</html>
